@@ -1,9 +1,8 @@
-
 import mysql.connector
 from mysql.connector import errorcode
 
 config = {
-    "user" : "movies_user",
+    "user": "movies_user",
     "password": "popcorn",
     "host": "127.0.0.1",
     "database": "movies",
@@ -13,7 +12,8 @@ config = {
 try:
     db = mysql.connector.connect(**config)
 
-    print("\n Database User {} connected to MYSQL on host {} with database {}", format(config["user"]), config["host"], config["database"])
+    print("\n Database User {} connected to MYSQL on host {} with database {}", format(config["user"]), config["host"],
+          config["database"])
     input("\n\n press any key to continue. . .")
 
 except mysql.connector.Error as err:
